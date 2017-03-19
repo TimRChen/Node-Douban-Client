@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/TimRChen/Node-Twitter-Client/issues"
   },
-  "homepage": "https://github.com/TimRChen/Node-Twitter-Client#readme"
+  "homepage": "https://github.com/TimRChen/Node-Twitter-Client#readme",
+  "dependencies": {
+    "superagent": "^3.5.1"
+  }
 }

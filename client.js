@@ -6,7 +6,7 @@ let http = require('http');
 let qs = require('querystring');
 
 // 请求地址信息
-let info = {
+let options = {
     host: '127.0.0.1',
     port: 3000,
     url: '/',
@@ -14,12 +14,9 @@ let info = {
 };
 
 let send = theName => {
-    http.request(info, res => {
-        res.setEncoding('utf8');
-        res.on('end', () => {
-            console.log('\n  \033[90m  request complete!\033[39m');
-            process.stdout.write('\n  your name: ');
-        });
+    http.request(options, res => {
+        console.log('\n  \033[90m  request complete!\033[39m');
+        process.stdout.write('\n  your name: ');
     }).end(qs.stringify({name: theName}));
     // qs.stringify 将 name: theName 转化为 name=theName即查询字符串
 };

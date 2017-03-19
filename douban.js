@@ -35,3 +35,7 @@ http.request(options, res => {
     });
 }).end();
 
+// 也可以使用如下形式，无需调用end()方法
+// http.get(options, res => {
+    // ..code
+// });
